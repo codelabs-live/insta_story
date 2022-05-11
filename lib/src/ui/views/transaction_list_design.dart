@@ -38,19 +38,35 @@ class _TransactionListDesignState extends State<TransactionListDesign> {
                             SizedBox(
                               height: size.height * 0.04,
                             ),
-                            Text("Welcome back,",style: TextStyle(fontSize: 22,fontWeight: FontWeight.w500),),
+                            Text(
+                              "Welcome back,",
+                              style: TextStyle(
+                                  fontSize: 22, fontWeight: FontWeight.w500),
+                            ),
                             SizedBox(
                               height: size.height * 0.005,
                             ),
-                            Text("Thomas",style: TextStyle(fontSize: 22,fontWeight: FontWeight.w500),),
+                            Text(
+                              "Thomas",
+                              style: TextStyle(
+                                  fontSize: 22, fontWeight: FontWeight.w500),
+                            ),
                             SizedBox(
                               height: size.height * 0.04,
                             ),
-                            Text("Your Balance",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500),),
+                            Text(
+                              "Your Balance",
+                              style: TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.w500),
+                            ),
                             SizedBox(
                               height: size.height * 0.01,
                             ),
-                            Text("\$ 24,980.00",style: TextStyle(fontSize: 28,fontWeight: FontWeight.w500),),
+                            Text(
+                              "\$ 24,980.00",
+                              style: TextStyle(
+                                  fontSize: 36, fontWeight: FontWeight.bold),
+                            ),
                           ],
                         ),
                       ),
@@ -79,7 +95,6 @@ class _TransactionListDesignState extends State<TransactionListDesign> {
                             ),
                           ),
                           Text("Yesterday"),
-
                           SizedBox(
                             height: 200,
                             child: ListView.builder(
