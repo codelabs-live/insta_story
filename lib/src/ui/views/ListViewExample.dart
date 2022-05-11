@@ -17,12 +17,11 @@ class _ListViewExampleState extends State<ListViewExample> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView.builder(
-
         itemCount: listItem.length,
         itemBuilder: (context, index) {
           return Card(
-            margin: EdgeInsets.all(0),
-            elevation: 10,
+            margin: EdgeInsets.all(1),
+            elevation: 3,
             child: Container(
               height: 70,
               margin: EdgeInsets.all(3),
