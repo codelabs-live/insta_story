@@ -80,32 +80,27 @@ class _TransactionListDesignState extends State<TransactionListDesign> {
                           left: 20,
                           right: 20,
                           bottom: size.height * 0.09),
-                      child: ListView(
-                        // shrinkWrap: true,
-                        children: [
-                          Text("Today"),
-                          SizedBox(
-                            // height: 200,
-                            child: ListView.builder(
+                      child: SingleChildScrollView(
+                        child: Column(
+                          children: [
+                            Text("Today"),
+                            ListView.builder(
                               shrinkWrap: true,
-                              physics: const ClampingScrollPhysics(),
+                              physics: const NeverScrollableScrollPhysics(),
                               itemBuilder: (context, index) => Container(
                                 child: Text('Demo'),
                               ),
                             ),
-                          ),
-                          Text("Yesterday"),
-                          SizedBox(
-                            height: 200,
-                            child: ListView.builder(
+                            Text("Yesterday"),
+                            ListView.builder(
                               shrinkWrap: true,
-                              physics: const ClampingScrollPhysics(),
+                              physics: const NeverScrollableScrollPhysics(),
                               itemBuilder: (context, index) => Container(
                                 child: Text('Demo'),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ))
               ],
