@@ -14,7 +14,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light(),
-      home: TransactionListDesign(),
+      home: const TransactionListDesign(),
     );
   }
 }
