@@ -23,27 +23,56 @@ class _TransactionListDesignState extends State<TransactionListDesign> {
                     flex: 4,
                     child: Container(
                       decoration: BoxDecoration(
-                        image: DecorationImage(image: NetworkImage('https://img.freepik.com/free-vector/gradient-dynamic-blue-lines-background_23-2148995756.jpg?w=1800&t=st=1652272285~exp=1652272885~hmac=c8be4ca72b1c915c8791d19a60913548ec663742e32c6c6e756ac95e0d6856fb'),fit: BoxFit.cover)
-                      ),
+                          image: DecorationImage(
+                              image: NetworkImage(
+                                  'https://img.freepik.com/free-vector/gradient-dynamic-blue-lines-background_23-2148995756.jpg?w=1800&t=st=1652272285~exp=1652272885~hmac=c8be4ca72b1c915c8791d19a60913548ec663742e32c6c6e756ac95e0d6856fb'),
+                              fit: BoxFit.cover)),
                       width: size.width,
                       child: Container(
                         margin: EdgeInsets.only(
                             left: 20,
                             right: 20,
                             top: size.height * 0.05,
-                            bottom: size.height * 0.05),
+                            bottom: size.height * 0.03),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Icon(Icons.notifications_sharp,color: Colors.white,),
+                            Container(
+                              width: 30,
+                              child: Stack(children: [
+                                Padding(
+                                  padding: EdgeInsets.only(top: 5),
+                                  child: Icon(
+                                    Icons.notifications_sharp,
+                                    color: Colors.white,
+                                    size: 30,
+                                  ),
+                                ),
+                                Align(
+                                  alignment: Alignment.topRight,
+                                  child: Container(
+                                    width: 18,
+                                    height: 18,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                      color: Colors.red,
+                                    ),
+
+                                    child: Center(child: Text('2',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold,color: Colors.white),)),
+                                  ),
+                                )
+                              ]),
+                            ),
                             SizedBox(
                               height: size.height * 0.04,
                             ),
                             Text(
                               "Welcome back,",
                               style: TextStyle(
-                                  fontSize: 22, fontWeight: FontWeight.w500,color: Colors.white70),
+                                  fontSize: 22,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.white70),
                             ),
                             SizedBox(
                               height: size.height * 0.005,
@@ -51,7 +80,9 @@ class _TransactionListDesignState extends State<TransactionListDesign> {
                             Text(
                               "Thomas",
                               style: TextStyle(
-                                  fontSize: 22, fontWeight: FontWeight.w500,color: Colors.white),
+                                  fontSize: 22,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.white),
                             ),
                             SizedBox(
                               height: size.height * 0.04,
@@ -59,7 +90,9 @@ class _TransactionListDesignState extends State<TransactionListDesign> {
                             Text(
                               "Your Balance",
                               style: TextStyle(
-                                  fontSize: 18, fontWeight: FontWeight.w500,color: Colors.white70),
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.white70),
                             ),
                             SizedBox(
                               height: size.height * 0.01,
@@ -67,7 +100,9 @@ class _TransactionListDesignState extends State<TransactionListDesign> {
                             Text(
                               "\$ 24,980.00",
                               style: TextStyle(
-                                  fontSize: 36, fontWeight: FontWeight.bold,color: Colors.white),
+                                  fontSize: 36,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
                             ),
                           ],
                         ),
@@ -85,7 +120,12 @@ class _TransactionListDesignState extends State<TransactionListDesign> {
                                 left: 20,
                                 right: 20,
                               ),
-                              child: Text("Today",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black54),)),
+                              child: Text(
+                                "Today",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black54),
+                              )),
                           SizedBox(
                             height: size.height * 0.02,
                           ),
@@ -126,10 +166,19 @@ class _TransactionListDesignState extends State<TransactionListDesign> {
                                               'Heading',
                                               style: TextStyle(
                                                   fontSize: 16,
-                                                  fontWeight: FontWeight.bold,color: Colors.black87),
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.black87),
                                             ),
-                                            SizedBox(height: size.height*0.003,),
-                                            Text('Subheading',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold,color: Colors.black54),)
+                                            SizedBox(
+                                              height: size.height * 0.003,
+                                            ),
+                                            Text(
+                                              'Subheading',
+                                              style: TextStyle(
+                                                  fontSize: 12,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.black54),
+                                            )
                                           ],
                                         ),
                                       )),
@@ -140,7 +189,8 @@ class _TransactionListDesignState extends State<TransactionListDesign> {
                                           child: Text("\$ 300",
                                               style: TextStyle(
                                                   fontSize: 15,
-                                                  fontWeight: FontWeight.bold,color: Colors.black87)),
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.black87)),
                                         ),
                                       ))
                                 ],
@@ -155,13 +205,21 @@ class _TransactionListDesignState extends State<TransactionListDesign> {
                                 left: 20,
                                 right: 20,
                               ),
-                              child: Text("Yesterday",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black54),)),
+                              child: Text(
+                                "Yesterday",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black54),
+                              )),
                           SizedBox(
                             height: size.height * 0.02,
                           ),
                           Padding(
                             padding: EdgeInsets.only(
-                                top: 10, left: 20, right: 20, bottom: size.height*0.1),
+                                top: 10,
+                                left: 20,
+                                right: 20,
+                                bottom: size.height * 0.1),
                             child: ListView.builder(
                               itemCount: 5,
                               shrinkWrap: true,
@@ -181,25 +239,34 @@ class _TransactionListDesignState extends State<TransactionListDesign> {
                                               Radius.circular(15),
                                             )),
                                         margin:
-                                        EdgeInsets.only(top: 10, right: 10),
+                                            EdgeInsets.only(top: 10, right: 10),
                                       )),
                                   Expanded(
                                       flex: 3,
                                       child: Container(
                                         child: Column(
                                           crossAxisAlignment:
-                                          CrossAxisAlignment.start,
+                                              CrossAxisAlignment.start,
                                           mainAxisAlignment:
-                                          MainAxisAlignment.start,
+                                              MainAxisAlignment.start,
                                           children: [
                                             Text(
                                               'Heading',
                                               style: TextStyle(
                                                   fontSize: 16,
-                                                  fontWeight: FontWeight.bold,color: Colors.black87),
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.black87),
                                             ),
-                                            SizedBox(height: size.height*0.003,),
-                                            Text('Subheading',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold,color: Colors.black54),)
+                                            SizedBox(
+                                              height: size.height * 0.003,
+                                            ),
+                                            Text(
+                                              'Subheading',
+                                              style: TextStyle(
+                                                  fontSize: 12,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.black54),
+                                            )
                                           ],
                                         ),
                                       )),
@@ -210,7 +277,8 @@ class _TransactionListDesignState extends State<TransactionListDesign> {
                                           child: Text("\$ 300",
                                               style: TextStyle(
                                                   fontSize: 15,
-                                                  fontWeight: FontWeight.bold,color: Colors.black87)),
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.black87)),
                                         ),
                                       ))
                                 ],
@@ -236,16 +304,32 @@ class _TransactionListDesignState extends State<TransactionListDesign> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Expanded(child: Icon(Icons.home,color: Colors.blue,)),
-                  Expanded(child: Icon(Icons.home,color: Colors.black38,)),
+                  Expanded(
+                      child: Icon(
+                    Icons.home,
+                    color: Colors.blue,
+                  )),
+                  Expanded(
+                      child: Icon(
+                    Icons.home,
+                    color: Colors.black38,
+                  )),
                   Expanded(
                       child: FloatingActionButton(
-                        backgroundColor: Colors.green,
+                    backgroundColor: Colors.green,
                     onPressed: () {},
                     child: Icon(Icons.add),
                   )),
-                  Expanded(child: Icon(Icons.home,color: Colors.black38,)),
-                  Expanded(child: Icon(Icons.home,color: Colors.black38,)),
+                  Expanded(
+                      child: Icon(
+                    Icons.home,
+                    color: Colors.black38,
+                  )),
+                  Expanded(
+                      child: Icon(
+                    Icons.home,
+                    color: Colors.black38,
+                  )),
                 ],
               ),
             ),
