@@ -81,7 +81,7 @@ class _TransactionListDesignState extends State<TransactionListDesign> {
                               left: 20,
                               right: 20,
                             ),
-                            child: Text("Today")),
+                            child: Text("Today",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black54),)),
                         SizedBox(
                           height: size.height * 0.02,
                         ),
@@ -89,7 +89,7 @@ class _TransactionListDesignState extends State<TransactionListDesign> {
                           padding: EdgeInsets.only(
                               top: 10, left: 20, right: 20, bottom: 20),
                           child: ListView.builder(
-                            itemCount: 30,
+                            itemCount: 3,
                             shrinkWrap: true,
                             physics: const ClampingScrollPhysics(),
                             itemBuilder: (context, index) => Row(
@@ -121,10 +121,11 @@ class _TransactionListDesignState extends State<TransactionListDesign> {
                                           Text(
                                             'Heading',
                                             style: TextStyle(
-                                                fontSize: 18,
-                                                fontWeight: FontWeight.bold),
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.bold,color: Colors.black87),
                                           ),
-                                          Text('Subheading')
+                                          SizedBox(height: size.height*0.003,),
+                                          Text('Subheading',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold,color: Colors.black54),)
                                         ],
                                       ),
                                     )),
@@ -134,8 +135,8 @@ class _TransactionListDesignState extends State<TransactionListDesign> {
                                       child: Center(
                                         child: Text("\$ 300",
                                             style: TextStyle(
-                                                fontSize: 16,
-                                                fontWeight: FontWeight.bold)),
+                                                fontSize: 15,
+                                                fontWeight: FontWeight.bold,color: Colors.black87)),
                                       ),
                                     ))
                               ],
@@ -150,15 +151,15 @@ class _TransactionListDesignState extends State<TransactionListDesign> {
                               left: 20,
                               right: 20,
                             ),
-                            child: Text("Yesterday")),
+                            child: Text("Yesterday",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black54),)),
                         SizedBox(
                           height: size.height * 0.02,
                         ),
                         Padding(
                           padding: EdgeInsets.only(
-                              top: 20, left: 20, right: 20, bottom: size.height*0.1),
+                              top: 10, left: 20, right: 20, bottom: size.height*0.1),
                           child: ListView.builder(
-                            itemCount: 30,
+                            itemCount: 5,
                             shrinkWrap: true,
                             physics: const ClampingScrollPhysics(),
                             itemBuilder: (context, index) => Row(
@@ -166,7 +167,7 @@ class _TransactionListDesignState extends State<TransactionListDesign> {
                                 Expanded(
                                     flex: 1,
                                     child: Container(
-                                      height: size.width * 0.2,
+                                      height: size.height * 0.07,
                                       decoration: BoxDecoration(
                                           image: DecorationImage(
                                               image: NetworkImage(
@@ -176,24 +177,25 @@ class _TransactionListDesignState extends State<TransactionListDesign> {
                                             Radius.circular(15),
                                           )),
                                       margin:
-                                          EdgeInsets.only(top: 10, right: 10),
+                                      EdgeInsets.only(top: 10, right: 10),
                                     )),
                                 Expanded(
-                                    flex: 2,
+                                    flex: 3,
                                     child: Container(
                                       child: Column(
                                         crossAxisAlignment:
-                                            CrossAxisAlignment.start,
+                                        CrossAxisAlignment.start,
                                         mainAxisAlignment:
-                                            MainAxisAlignment.start,
+                                        MainAxisAlignment.start,
                                         children: [
                                           Text(
                                             'Heading',
                                             style: TextStyle(
-                                                fontSize: 20,
-                                                fontWeight: FontWeight.bold),
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.bold,color: Colors.black87),
                                           ),
-                                          Text('Subheading')
+                                          SizedBox(height: size.height*0.003,),
+                                          Text('Subheading',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold,color: Colors.black54),)
                                         ],
                                       ),
                                     )),
@@ -203,8 +205,8 @@ class _TransactionListDesignState extends State<TransactionListDesign> {
                                       child: Center(
                                         child: Text("\$ 300",
                                             style: TextStyle(
-                                                fontSize: 18,
-                                                fontWeight: FontWeight.bold)),
+                                                fontSize: 15,
+                                                fontWeight: FontWeight.bold,color: Colors.black87)),
                                       ),
                                     ))
                               ],
