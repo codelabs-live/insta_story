@@ -22,15 +22,33 @@ class _TransactionListDesignState extends State<TransactionListDesign> {
                 Expanded(
                     flex:4,
                     child: Container(
+                      width: size.width,
+                      child: Container(
+                        margin: EdgeInsets.only(left: 20,right: 20,top: size.height*0.05,bottom: size.height*0.05),
                   color: Colors.blue,
-                )),
+                        child: Column(
+                          children: [
+                            Icon(Icons.notifications_sharp),
+                            Text("Demo"),
+                            Text("Demo"),
+                            Text("Demo"),
+                            Text("Demo"),
+                          ],
+                        ),
+                ),
+                    )),
                 Expanded(
                     flex:6,child: Container(
                   color: Colors.black12,
                   margin: EdgeInsets.only(top: 20,left: 20,right: 20,bottom: size.height*0.09),
                       child: ListView(
                   children: [
-
+Text("Today"),
+                    ListView.builder(
+                      shrinkWrap: true,
+                      itemBuilder:(context, index) => Container(
+                      child: Text('Demo'),
+                    ),)
                   ],
                 ),
                     ))
