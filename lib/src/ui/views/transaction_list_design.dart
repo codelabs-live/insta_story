@@ -80,27 +80,28 @@ class _TransactionListDesignState extends State<TransactionListDesign> {
                           left: 20,
                           right: 20,
                           bottom: size.height * 0.09),
-                      child: SingleChildScrollView(
-                        child: Column(
-                          children: [
-                            Text("Today"),
-                            ListView.builder(
-                              shrinkWrap: true,
-                              physics: const NeverScrollableScrollPhysics(),
-                              itemBuilder: (context, index) => Container(
-                                child: Text('Demo'),
-                              ),
+                      child: ListView(
+                        shrinkWrap: true,
+                        children: [
+                          Text("Today"),
+                          ListView.builder(
+                            itemCount: 30,
+                            shrinkWrap: true,
+                            physics: const ClampingScrollPhysics(),
+                            itemBuilder: (context, index) => Container(
+                              child: Text('Demo'),
                             ),
-                            Text("Yesterday"),
-                            ListView.builder(
-                              shrinkWrap: true,
-                              physics: const NeverScrollableScrollPhysics(),
-                              itemBuilder: (context, index) => Container(
-                                child: Text('Demo'),
-                              ),
+                          ),
+                          Text("Yesterday"),
+                          ListView.builder(
+                            shrinkWrap: true,
+                            itemCount: 30,
+                            physics: const ClampingScrollPhysics(),
+                            itemBuilder: (context, index) => Container(
+                              child: Text('Demo'),
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                     ))
               ],
@@ -121,7 +122,7 @@ class _TransactionListDesignState extends State<TransactionListDesign> {
                   Expanded(
                       child: FloatingActionButton(
                     onPressed: () {},
-                        child: Icon(Icons.add),
+                    child: Icon(Icons.add),
                   )),
                   Expanded(child: Icon(Icons.home)),
                   Expanded(child: Icon(Icons.home)),
