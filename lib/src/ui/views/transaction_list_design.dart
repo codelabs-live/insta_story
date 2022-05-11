@@ -72,7 +72,7 @@ class _TransactionListDesignState extends State<TransactionListDesign> {
                       ),
                     )),
                 Expanded(
-                    flex: 6,
+                    flex: 7,
                     child: Container(
                       color: Colors.black12,
                       margin: EdgeInsets.only(
@@ -81,13 +81,13 @@ class _TransactionListDesignState extends State<TransactionListDesign> {
                           right: 20,
                           bottom: size.height * 0.09),
                       child: ListView(
-                        shrinkWrap: true,
+                        // shrinkWrap: true,
                         children: [
                           Text("Today"),
                           SizedBox(
-                            height: 200,
+                            // height: 200,
                             child: ListView.builder(
-                              // shrinkWrap: true,
+                              shrinkWrap: true,
                               physics: const ClampingScrollPhysics(),
                               itemBuilder: (context, index) => Container(
                                 child: Text('Demo'),
@@ -98,7 +98,7 @@ class _TransactionListDesignState extends State<TransactionListDesign> {
                           SizedBox(
                             height: 200,
                             child: ListView.builder(
-                              // shrinkWrap: true,
+                              shrinkWrap: true,
                               physics: const ClampingScrollPhysics(),
                               itemBuilder: (context, index) => Container(
                                 child: Text('Demo'),
@@ -126,6 +126,7 @@ class _TransactionListDesignState extends State<TransactionListDesign> {
                   Expanded(
                       child: FloatingActionButton(
                     onPressed: () {},
+                        child: Icon(Icons.add),
                   )),
                   Expanded(child: Icon(Icons.home)),
                   Expanded(child: Icon(Icons.home)),
