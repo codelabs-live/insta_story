@@ -8,10 +8,23 @@ class ListViewExample extends StatefulWidget {
 }
 
 class _ListViewExampleState extends State<ListViewExample> {
-  List<ListModel> listItem = [
-    ListModel(subHeading: "1 sub Heading", dateTime: "30", imageUri: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg", mainHeading: "Heading"),
-    ListModel(subHeading: "2 sub Heading", dateTime: "30", imageUri: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg", mainHeading: "Heading")
-  ];
+  List<ListModel> listItem=[];
+  @override
+  void initState() {
+    // TODO: implement initState
+    listItem = [
+      ListModel(subHeading: "1 sub Heading", dateTime: "30", imageUri: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg", mainHeading: "Heading"),
+      ListModel(subHeading: "2 sub Heading", dateTime: "30", imageUri: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg", mainHeading: "Heading"),
+      ListModel(subHeading: "1 sub Heading", dateTime: "30", imageUri: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg", mainHeading: "Heading"),
+      ListModel(subHeading: "2 sub Heading", dateTime: "30", imageUri: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg", mainHeading: "Heading"),
+      ListModel(subHeading: "1 sub Heading", dateTime: "30", imageUri: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg", mainHeading: "Heading"),
+      ListModel(subHeading: "2 sub Heading", dateTime: "30", imageUri: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg", mainHeading: "Heading"),
+      ListModel(subHeading: "1 sub Heading", dateTime: "30", imageUri: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg", mainHeading: "Heading"),
+      ListModel(subHeading: "2 sub Heading", dateTime: "30", imageUri: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg", mainHeading: "Heading")
+    ];
+
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
