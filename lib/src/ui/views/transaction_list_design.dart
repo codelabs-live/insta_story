@@ -22,6 +22,7 @@ class _TransactionListDesignState extends State<TransactionListDesign> {
                 Expanded(
                     flex: 4,
                     child: Container(
+                      color: Colors.blue,
                       width: size.width,
                       child: Container(
                         margin: EdgeInsets.only(
@@ -29,28 +30,27 @@ class _TransactionListDesignState extends State<TransactionListDesign> {
                             right: 20,
                             top: size.height * 0.05,
                             bottom: size.height * 0.05),
-                        color: Colors.blue,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Icon(Icons.notifications_sharp,color: Colors.white,),
+                            Icon(Icons.notifications_sharp),
                             SizedBox(
-                              height: size.height * 0.03,
+                              height: size.height * 0.04,
                             ),
-                            Text("Welcome back,"),
+                            Text("Welcome back,",style: TextStyle(fontSize: 22,fontWeight: FontWeight.w500),),
+                            SizedBox(
+                              height: size.height * 0.005,
+                            ),
+                            Text("Thomas",style: TextStyle(fontSize: 22,fontWeight: FontWeight.w500),),
+                            SizedBox(
+                              height: size.height * 0.04,
+                            ),
+                            Text("Your Balance",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500),),
                             SizedBox(
                               height: size.height * 0.01,
                             ),
-                            Text("Thomas"),
-                            SizedBox(
-                              height: size.height * 0.03,
-                            ),
-                            Text("Your Balance"),
-                            SizedBox(
-                              height: size.height * 0.01,
-                            ),
-                            Text("\$ 24,980.00"),
+                            Text("\$ 24,980.00",style: TextStyle(fontSize: 28,fontWeight: FontWeight.w500),),
                           ],
                         ),
                       ),
