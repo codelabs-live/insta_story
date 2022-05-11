@@ -34,7 +34,7 @@ class _TransactionListDesignState extends State<TransactionListDesign> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Icon(Icons.notifications_sharp),
+                            Icon(Icons.notifications_sharp,color: Colors.white,),
                             SizedBox(
                               height: size.height * 0.03,
                             ),
