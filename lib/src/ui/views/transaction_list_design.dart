@@ -31,6 +31,8 @@ class _TransactionListDesignState extends State<TransactionListDesign> {
                             bottom: size.height * 0.05),
                         color: Colors.blue,
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Icon(Icons.notifications_sharp),
                             SizedBox(
@@ -66,19 +68,26 @@ class _TransactionListDesignState extends State<TransactionListDesign> {
                         shrinkWrap: true,
                         children: [
                           Text("Today"),
-                          ListView.builder(
-                            shrinkWrap: true,
-                            physics: const ClampingScrollPhysics(),
-                            itemBuilder: (context, index) => Container(
-                              child: Text('Demo'),
+                          SizedBox(
+                            height: 200,
+                            child: ListView.builder(
+                              // shrinkWrap: true,
+                              physics: const ClampingScrollPhysics(),
+                              itemBuilder: (context, index) => Container(
+                                child: Text('Demo'),
+                              ),
                             ),
                           ),
                           Text("Yesterday"),
-                          ListView.builder(
-                            shrinkWrap: true,
-                            physics: const ClampingScrollPhysics(),
-                            itemBuilder: (context, index) => Container(
-                              child: Text('Demo'),
+
+                          SizedBox(
+                            height: 200,
+                            child: ListView.builder(
+                              // shrinkWrap: true,
+                              physics: const ClampingScrollPhysics(),
+                              itemBuilder: (context, index) => Container(
+                                child: Text('Demo'),
+                              ),
                             ),
                           ),
                         ],
@@ -99,7 +108,10 @@ class _TransactionListDesignState extends State<TransactionListDesign> {
                 children: [
                   Expanded(child: Icon(Icons.home)),
                   Expanded(child: Icon(Icons.home)),
-                  Expanded(child: FloatingActionButton(onPressed: () {  },)),
+                  Expanded(
+                      child: FloatingActionButton(
+                    onPressed: () {},
+                  )),
                   Expanded(child: Icon(Icons.home)),
                   Expanded(child: Icon(Icons.home)),
                 ],
