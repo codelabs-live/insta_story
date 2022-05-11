@@ -56,10 +56,17 @@ class _TransactionListDesignState extends State<TransactionListDesign> {
                                     height: 18,
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(10),
+                                      border: Border.all(color: Colors.blue,width: 1),
                                       color: Colors.red,
                                     ),
-
-                                    child: Center(child: Text('2',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold,color: Colors.white),)),
+                                    child: Center(
+                                        child: Text(
+                                      '2',
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.white),
+                                    )),
                                   ),
                                 )
                               ]),
