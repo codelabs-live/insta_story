@@ -73,36 +73,148 @@ class _TransactionListDesignState extends State<TransactionListDesign> {
                     )),
                 Expanded(
                     flex: 7,
-                    child: Container(
-                      color: Colors.black12,
-                      margin: EdgeInsets.only(
-                          top: 20,
-                          left: 20,
-                          right: 20,
-                          bottom: size.height * 0.09),
-                      child: ListView(
-                        shrinkWrap: true,
-                        children: [
-                          Text("Today"),
-                          ListView.builder(
+                    child: ListView(
+                      shrinkWrap: true,
+                      children: [
+                        Padding(
+                            padding: EdgeInsets.only(
+                              left: 20,
+                              right: 20,
+                            ),
+                            child: Text("Today")),
+                        SizedBox(
+                          height: size.height * 0.02,
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(
+                              top: 20, left: 20, right: 20, bottom: 20),
+                          child: ListView.builder(
                             itemCount: 30,
                             shrinkWrap: true,
                             physics: const ClampingScrollPhysics(),
-                            itemBuilder: (context, index) => Container(
-                              child: Text('Demo'),
+                            itemBuilder: (context, index) => Row(
+                              children: [
+                                Expanded(
+                                    flex: 1,
+                                    child: Container(
+                                      height: size.width * 0.2,
+                                      decoration: BoxDecoration(
+                                          image: DecorationImage(
+                                              image: NetworkImage(
+                                                  'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg'),
+                                              fit: BoxFit.cover),
+                                          borderRadius: BorderRadius.all(
+                                            Radius.circular(15),
+                                          )),
+                                      margin:
+                                          EdgeInsets.only(top: 10, right: 10),
+                                    )),
+                                Expanded(
+                                    flex: 2,
+                                    child: Container(
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            'Heading',
+                                            style: TextStyle(
+                                                fontSize: 20,
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                          Text('Subheading')
+                                        ],
+                                      ),
+                                    )),
+                                Expanded(
+                                    flex: 1,
+                                    child: Container(
+                                      child: Center(
+                                        child: Text("\$ 300",
+                                            style: TextStyle(
+                                                fontSize: 18,
+                                                fontWeight: FontWeight.bold)),
+                                      ),
+                                    ))
+                              ],
                             ),
                           ),
-                          Text("Yesterday"),
-                          ListView.builder(
-                            shrinkWrap: true,
+                        ),
+                        SizedBox(
+                          height: size.height * 0.02,
+                        ),
+                        Padding(
+                            padding: EdgeInsets.only(
+                              left: 20,
+                              right: 20,
+                            ),
+                            child: Text("Yesterday")),
+                        SizedBox(
+                          height: size.height * 0.02,
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(
+                              top: 20, left: 20, right: 20, bottom: size.height*0.1),
+                          child: ListView.builder(
                             itemCount: 30,
+                            shrinkWrap: true,
                             physics: const ClampingScrollPhysics(),
-                            itemBuilder: (context, index) => Container(
-                              child: Text('Demo'),
+                            itemBuilder: (context, index) => Row(
+                              children: [
+                                Expanded(
+                                    flex: 1,
+                                    child: Container(
+                                      height: size.width * 0.2,
+                                      decoration: BoxDecoration(
+                                          image: DecorationImage(
+                                              image: NetworkImage(
+                                                  'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg'),
+                                              fit: BoxFit.cover),
+                                          borderRadius: BorderRadius.all(
+                                            Radius.circular(15),
+                                          )),
+                                      margin:
+                                          EdgeInsets.only(top: 10, right: 10),
+                                    )),
+                                Expanded(
+                                    flex: 2,
+                                    child: Container(
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            'Heading',
+                                            style: TextStyle(
+                                                fontSize: 20,
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                          Text('Subheading')
+                                        ],
+                                      ),
+                                    )),
+                                Expanded(
+                                    flex: 1,
+                                    child: Container(
+                                      child: Center(
+                                        child: Text("\$ 300",
+                                            style: TextStyle(
+                                                fontSize: 18,
+                                                fontWeight: FontWeight.bold)),
+                                      ),
+                                    ))
+                              ],
                             ),
                           ),
-                        ],
-                      ),
+                        ),
+                        SizedBox(
+                          height: size.height * 0.02,
+                        ),
+                      ],
                     ))
               ],
             ),
