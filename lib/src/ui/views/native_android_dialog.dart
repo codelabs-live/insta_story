@@ -91,18 +91,32 @@ class _NativeAndroidDialogState extends State<NativeAndroidDialog> {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  ElevatedButton(
-                                    style: ButtonStyle(
-                                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                                            RoundedRectangleBorder(
-                                                borderRadius: BorderRadius.circular(18.0),
-                                            )
-                                        )
+                                  SizedBox(
+                                    width: size.width*0.3,
+                                    child: ElevatedButton(
+                                      style: ButtonStyle(
+                                          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                              RoundedRectangleBorder(
+                                                  borderRadius: BorderRadius.circular(18.0),
+                                              )
+                                          )
 
-                                    ),
-                                      onPressed: () {}, child: Text('Demo')),
-                                  ElevatedButton(
-                                      onPressed: () {}, child: Text('Demo'))
+                                      ),
+                                        onPressed: () {}, child: Text('Demo')),
+                                  ),
+                                  SizedBox(
+                                    width: size.width*0.3,
+                                    child: ElevatedButton(
+                                        style: ButtonStyle(
+                                            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                                RoundedRectangleBorder(
+                                                  borderRadius: BorderRadius.circular(18.0),
+                                                )
+                                            )
+
+                                        ),
+                                        onPressed: () {}, child: Text('Demo')),
+                                  )
                                 ],
                               ),
                             ),
