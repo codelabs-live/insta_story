@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
@@ -66,7 +68,7 @@ class _NativeAndroidDialogState extends State<NativeAndroidDialog> {
                                 style: TextStyle(
                                   fontSize: 30,
                                 ),
-                                    textAlign: TextAlign.center,
+                                textAlign: TextAlign.center,
                               )),
                             ),
                           ),
@@ -80,7 +82,7 @@ class _NativeAndroidDialogState extends State<NativeAndroidDialog> {
                                 style: TextStyle(
                                   fontSize: 20,
                                 ),
-                                    textAlign: TextAlign.center,
+                                textAlign: TextAlign.center,
                               )),
                             ),
                           ),
@@ -89,33 +91,43 @@ class _NativeAndroidDialogState extends State<NativeAndroidDialog> {
                               padding: EdgeInsets.only(
                                   top: 10, bottom: 20, left: 20, right: 20),
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   SizedBox(
-                                    width: size.width*0.3,
-                                    child: ElevatedButton(
-                                      style: ButtonStyle(
-                                          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                                              RoundedRectangleBorder(
-                                                  borderRadius: BorderRadius.circular(18.0),
-                                              )
-                                          )
-
-                                      ),
-                                        onPressed: () {}, child: Text('Demo')),
-                                  ),
-                                  SizedBox(
-                                    width: size.width*0.3,
+                                    width: size.width * 0.3,
                                     child: ElevatedButton(
                                         style: ButtonStyle(
-                                            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                            backgroundColor:
+                                            MaterialStateProperty.all<
+                                                Color>(Colors.black26),
+                                            shape: MaterialStateProperty.all<
+                                                    RoundedRectangleBorder>(
                                                 RoundedRectangleBorder(
-                                                  borderRadius: BorderRadius.circular(18.0),
-                                                )
-                                            )
+                                          borderRadius:
+                                              BorderRadius.circular(18.0),
 
-                                        ),
-                                        onPressed: () {}, child: Text('Demo')),
+                                        ))),
+                                        onPressed: () {
+                                          Navigator.pop(context);
+                                        },
+                                        child: Text('Cancel')),
+                                  ),
+                                  SizedBox(
+                                    width: size.width * 0.3,
+                                    child: ElevatedButton(
+                                        style: ButtonStyle(
+                                            backgroundColor:
+                                                MaterialStateProperty.all<
+                                                    Color>(Colors.red),
+                                            shape: MaterialStateProperty.all<
+                                                    RoundedRectangleBorder>(
+                                                RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(18.0),
+                                            ))),
+                                        onPressed: () {},
+                                        child: Text('Ok')),
                                   )
                                 ],
                               ),
