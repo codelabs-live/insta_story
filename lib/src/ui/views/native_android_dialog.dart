@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 class NativeAndroidDialog extends StatefulWidget {
   const NativeAndroidDialog({Key? key}) : super(key: key);
@@ -55,9 +56,49 @@ class _NativeAndroidDialogState extends State<NativeAndroidDialog> {
                       height: size.height * 0.25,
                       child: Column(
                         children: [
-                          Expanded(child: Container()),
-                          Expanded(child: Container()),
-                          Expanded(child: Container())
+                          Expanded(
+                            child: Padding(
+                              padding: EdgeInsets.only(
+                                  top: 20, bottom: 10, left: 20, right: 20),
+                              child: Flexible(
+                                  child: Text(
+                                'Demo Example Dialog Box askjdfdgqhjfvqahjfbahj',
+                                style: TextStyle(
+                                  fontSize: 30,
+                                ),
+                                    textAlign: TextAlign.center,
+                              )),
+                            ),
+                          ),
+                          Expanded(
+                            child: Padding(
+                              padding: EdgeInsets.only(
+                                  top: 10, bottom: 10, left: 20, right: 20),
+                              child: Flexible(
+                                  child: Text(
+                                'Demo Example Dialog Box askjdfdgqhjfvqahjfbahj',
+                                style: TextStyle(
+                                  fontSize: 20,
+                                ),
+                                    textAlign: TextAlign.center,
+                              )),
+                            ),
+                          ),
+                          Expanded(
+                            child: Padding(
+                              padding: EdgeInsets.only(
+                                  top: 10, bottom: 20, left: 20, right: 20),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  ElevatedButton(
+                                      onPressed: () {}, child: Text('Demo')),
+                                  ElevatedButton(
+                                      onPressed: () {}, child: Text('Demo'))
+                                ],
+                              ),
+                            ),
+                          )
                         ],
                       ),
                     ),
