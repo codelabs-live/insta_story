@@ -35,19 +35,34 @@ class _NativeAndroidDialogState extends State<NativeAndroidDialog> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Expanded(flex: 2,
+                  Expanded(
+                    flex: 2,
                     child: Container(
-                    height: size.height*0.25,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(topLeft: Radius.circular(20),topRight:Radius.circular(20) ),
-                      image: DecorationImage(image: NetworkImage('https://img.freepik.com/free-vector/gradient-dynamic-blue-lines-background_23-2148995756.jpg?w=1800&t=st=1652272285~exp=1652272885~hmac=c8be4ca72b1c915c8791d19a60913548ec663742e32c6c6e756ac95e0d6856fb'),fit: BoxFit.cover)
+                      height: size.height * 0.25,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(20),
+                              topRight: Radius.circular(20)),
+                          image: DecorationImage(
+                              image: NetworkImage(
+                                  'https://img.freepik.com/free-vector/gradient-dynamic-blue-lines-background_23-2148995756.jpg?w=1800&t=st=1652272285~exp=1652272885~hmac=c8be4ca72b1c915c8791d19a60913548ec663742e32c6c6e756ac95e0d6856fb'),
+                              fit: BoxFit.cover)),
                     ),
-                ),
-                  ), Expanded(flex: 3,
+                  ),
+                  Expanded(
+                    flex: 3,
                     child: Container(
-                      height: size.height*0.25,
+                      height: size.height * 0.25,
+                      child: Column(
+                        children: [
+                          Expanded(child: Container()),
+                          Expanded(child: Container()),
+                          Expanded(child: Container())
+                        ],
+                      ),
                     ),
-                  )],
+                  )
+                ],
               ),
             ),
           );
