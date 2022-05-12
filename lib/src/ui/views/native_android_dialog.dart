@@ -10,16 +10,11 @@ class _NativeAndroidDialogState extends State<NativeAndroidDialog> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Scaffold(body: Container(
-      child: Card(
-        child: Container(
-          child: Column(
-            children: [
+    return Scaffold(body: Center(
+    child: ElevatedButton(onPressed: (){
 
-            ],
-          ),
-        ),
-      ),
+    },
+    child: Text("Click"),),
     ));
   }
 }
