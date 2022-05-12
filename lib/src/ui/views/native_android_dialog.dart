@@ -29,18 +29,25 @@ class _NativeAndroidDialogState extends State<NativeAndroidDialog> {
           return Dialog(
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20.0)), //this right here
-            child: Card(
-              child: SizedBox(
-                height: size.height * 0.5,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [Container(
+            child: SizedBox(
+              height: size.height * 0.5,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Expanded(flex: 2,
+                    child: Container(
+                    height: size.height*0.25,
                     decoration: BoxDecoration(
-                      image: DecorationImage(image: NetworkImage())
+                      borderRadius: BorderRadius.only(topLeft: Radius.circular(20),topRight:Radius.circular(20) ),
+                      image: DecorationImage(image: NetworkImage('https://img.freepik.com/free-vector/gradient-dynamic-blue-lines-background_23-2148995756.jpg?w=1800&t=st=1652272285~exp=1652272885~hmac=c8be4ca72b1c915c8791d19a60913548ec663742e32c6c6e756ac95e0d6856fb'),fit: BoxFit.cover)
                     ),
-                  ), Container()],
                 ),
+                  ), Expanded(flex: 3,
+                    child: Container(
+                      height: size.height*0.25,
+                    ),
+                  )],
               ),
             ),
           );
