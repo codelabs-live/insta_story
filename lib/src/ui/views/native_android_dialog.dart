@@ -30,14 +30,16 @@ class _NativeAndroidDialogState extends State<NativeAndroidDialog> {
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20.0)), //this right here
             child: Card(
-              child: Container(
-                height: size.height*0.5,
+              child: SizedBox(
+                height: size.height * 0.5,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-
-                  ],
+                  children: [Container(
+                    decoration: BoxDecoration(
+                      image: DecorationImage(image: NetworkImage())
+                    ),
+                  ), Container()],
                 ),
               ),
             ),
