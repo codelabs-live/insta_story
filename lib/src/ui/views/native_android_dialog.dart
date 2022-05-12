@@ -92,6 +92,14 @@ class _NativeAndroidDialogState extends State<NativeAndroidDialog> {
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   ElevatedButton(
+                                    style: ButtonStyle(
+                                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                            RoundedRectangleBorder(
+                                                borderRadius: BorderRadius.circular(18.0),
+                                            )
+                                        )
+
+                                    ),
                                       onPressed: () {}, child: Text('Demo')),
                                   ElevatedButton(
                                       onPressed: () {}, child: Text('Demo'))
