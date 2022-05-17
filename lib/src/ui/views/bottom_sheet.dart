@@ -18,28 +18,30 @@ class _BottomSheetExampleState extends State<BottomSheetExample> {
       child: Center(
         child: ElevatedButton(
           onPressed: () {
-            showModalBottomSheet(
-                context: context,
-                builder: (context) => Container(
-                  // height: size.height*0.7,
-                      width: size.width,
-                      child: ListView.builder(
-                        itemCount: 5,
-                        itemBuilder: (
-                                (context, index) => Padding(padding: EdgeInsets.all(10),
-                                child: Text("$index Item"))),
-                      ),
-                    ));
 
             showModalBottomSheet(
                 context: context,
                 isScrollControlled: true,
                 builder: (context) => Container(
                   width: size.width,
-                  height: size.height*0.2,
-                  color: Colors.red,
+                  height: size.height*0.9,
+                  // height: size.height*0.2,
+                  color: Colors.blue,
                   child: ListView.builder(
                     itemCount: 3,
+                    itemBuilder: (
+                            (context, index) => Padding(padding: EdgeInsets.all(10),
+                            child: Text("$index Item"))),
+                  ),
+                ));
+
+            showModalBottomSheet(
+                context: context,
+                builder: (context) => FractionallySizedBox(
+                  // height: size.height*0.7,
+                  widthFactor: size.width,
+                  child: ListView.builder(
+                    itemCount: 5,
                     itemBuilder: (
                             (context, index) => Padding(padding: EdgeInsets.all(10),
                             child: Text("$index Item"))),
