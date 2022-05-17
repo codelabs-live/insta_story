@@ -4,6 +4,7 @@ import 'package:insta_story/src/ui/views/bottom_sheet.dart';
 import 'package:insta_story/src/ui/views/card_example.dart';
 import 'package:insta_story/src/ui/views/home.dart';
 import 'package:insta_story/src/ui/views/login.dart';
+import 'package:insta_story/src/ui/views/login_form.dart';
 import 'package:insta_story/src/ui/views/native_android_dialog.dart';
 import 'package:insta_story/src/ui/views/transaction_list_design.dart';
 

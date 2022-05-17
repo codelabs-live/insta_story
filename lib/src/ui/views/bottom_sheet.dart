@@ -21,6 +21,7 @@ class _BottomSheetExampleState extends State<BottomSheetExample> {
             showModalBottomSheet(
                 context: context,
                 builder: (context) => Container(
+                  // height: size.height*0.7,
                       width: size.width,
                       child: ListView.builder(
                         itemCount: 5,
@@ -29,6 +30,21 @@ class _BottomSheetExampleState extends State<BottomSheetExample> {
                                 child: Text("$index Item"))),
                       ),
                     ));
+
+            showModalBottomSheet(
+                context: context,
+                isScrollControlled: true,
+                builder: (context) => Container(
+                  width: size.width,
+                  height: size.height*0.2,
+                  color: Colors.red,
+                  child: ListView.builder(
+                    itemCount: 3,
+                    itemBuilder: (
+                            (context, index) => Padding(padding: EdgeInsets.all(10),
+                            child: Text("$index Item"))),
+                  ),
+                ));
           },
           child: Text("Click"),
         ),
